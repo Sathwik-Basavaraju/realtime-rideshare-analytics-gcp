@@ -1,5 +1,11 @@
 """Pandas simulation of the streaming logic (no live Pub/Sub/Dataflow).
 
+Note on timing: this demo uses 5-minute tumbling windows, so it does
+NOT reproduce the original project's 60-second anomaly alerts.
+The 60-second figure is the original production context from the
+LinkedIn description; the sample here flags anomalies at window
+granularity for demonstration only.
+
 Steps:
 1. Read data/sample_events.csv.
 2. Deduplicate by event_id, keeping the first occurrence — this
