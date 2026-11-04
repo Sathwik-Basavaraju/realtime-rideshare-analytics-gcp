@@ -59,3 +59,10 @@ Outputs:
   input with Pub/Sub, the pandas windowing with Dataflow/Beam, the local
   outputs with BigQuery (see `sql/bigquery_schema.sql`), and the local
   Streamlit demo with a deployed app — none of that is wired up here.
+
+## Alignment update — 2026-11-04 review
+New files added in this review, to align the repo with the LinkedIn tech list:
+- `src/beam_pipeline.py` — Apache Beam pipeline skeleton (example only, requires apache-beam + GCP; not run locally).
+- `src/pubsub_example.py` — Pub/Sub publisher example (example only, requires google-cloud-pubsub + GCP).
+- `src/stream_processor.py` — docstring now states the demo uses 5-minute windows and does NOT reproduce the original 60-second alerts.
+See ALIGNMENT.md for the full claim-to-file mapping.
